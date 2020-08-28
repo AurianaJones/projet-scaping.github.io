@@ -1,6 +1,6 @@
 #https://www.gamekult.com/jeux/dernieres-sorties.html
 #<div class ="pr__game-h__mdb__details">Titre, Editeur, Deveuloper, Genre, Plateforme</div>
-#<div class ="pr__game-h__mdb__details">Date de sortie par Plateforme, prix</div>
+#<div class ="pr__game-h__mdb__offers">Date de sortie par Plateforme, prix</div>
 import requests
 from bs4 import BeautifulSoup
 import pprint
@@ -8,16 +8,16 @@ import pprint
 html = requests.get("https://www.gamekult.com/jeux/dernieres-sorties.html")
 html_doc = html.text
 soup = BeautifulSoup(html_doc, 'html.parser')
-#print(soup.find_all("div",class_="pr__game-h__mdb__details"))
 
-titles = soup.body.find_all("span", class_="pr__game-h__mdb__details__title gk__helpers__fat-title-m")
+#titles = "span", class_="pr__game-h__mdb__details__title"
+#category = "span", class_="pr__game-h__mdb__details__category"
+#compagny = "span", class_= "pr__game-h__mdb__details__company"
+#platform = "span", class_ = "pr__platform__tag--link"
 
-category = soup.body.find_all("span", class_="pr__game-h__mdb__details__category")
 
-
-
-test = soup.find("span", attrs={'class': "pr__game-h__mdb__details__title gk__helpers__fat-title-m"})
+test = soup.find("span", attrs={'class': "pr__game-h__mdb__details__title"})
 result = test.find_all("a")
 
-#qu'un seul titre
-print(result)
+all_game = soup.find_all("div", class_="pr__game-h__mdb__details")
+price = soup.find_all(div ,class_="pr__game-h__mdb__offers")
+print(all_game[0])
