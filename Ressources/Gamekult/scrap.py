@@ -19,5 +19,5 @@ test = soup.find("span", attrs={'class': "pr__game-h__mdb__details__title"})
 result = test.find_all("a")
 
 all_game = soup.find_all("div", class_="pr__game-h__mdb__details")
-price = soup.find_all(div ,class_="pr__game-h__mdb__offers")
-print(all_game[0])
+dates_prices_plat = soup.find_all("div" ,class_="pr__game-h__mdb__offers")
+print(dates_prices_plat)
