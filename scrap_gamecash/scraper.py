@@ -1,7 +1,7 @@
 # import libraries
 import sqlite3
 from sqlite3 import connect
-conn = connect('/Users/hugofugeray/Desktop/projet-scaping.github.io/scrap_gamecash/scrap_game.db')
+conn = connect('/Users/hugofugeray/Desktop/scrap_game.db')
 curs= conn.cursor()
 from bs4 import BeautifulSoup
 import urllib.request
@@ -62,13 +62,3 @@ for result in results:
   curs.execute("INSERT INTO games (Titre, Genre, Plateforme, Date_de_sortie) VALUES (?, ?, ?, ?);", (Titre, Genre, Plateforme, Date_de_sortie))
 
   conn.commit()
-
-
-  #rows.append([PLATEFORME , TITRE, GENRE, DATE_DE_SORTIE])
-  #print(rows)
-# Create csv and write rows to output file
-#with open('games.csv','w', newline='') as f_output:
- # csv_output = csv.writer(f_output)
- # csv_output.writerows(Plateforme)
-
-
