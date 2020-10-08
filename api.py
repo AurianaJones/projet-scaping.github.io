@@ -18,7 +18,7 @@ c = conn.cursor()
 password = """
 d{|Dvz<43pN]{aH4)3)S.3+RBcaUY2,m.C-z22ZX+KV(,Ez8E@nTQv3:z3443^62|pr6%HtrC3m)9]!rxV#6R[?dm69FUyJ86C8a6fuf9n]q<jgK]92$VG9cZz<466dQ8mHa6v-MwC+wbKnn#X66i75YbKR#cHPt}[p)96)b7>+76>JYS5Ti(663KWU}/2nU}}2Z:=U
 """
-
+password ="a"
 @app.get("/start-scraper/{password}")
 async def start_scraper():
     headers = {"Access-Control-Allow-Origin":""}
