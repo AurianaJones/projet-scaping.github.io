@@ -1,4 +1,4 @@
-const url = "https://app-hidn.herokuapp.com/"
+const url = "https://api-scrapper-games.herokuapp.com/"
 
 
 const DATAplatform = 'Plateform'
