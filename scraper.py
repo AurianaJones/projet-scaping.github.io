@@ -19,7 +19,7 @@ def scraper():
   curs = conn.cursor()
   #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-  create_tables(curs,conn)
+  create_tables(curs, conn)
   scraping_append_links(urlpage, links, nomdomaine)
 
   for link in links :
@@ -28,4 +28,3 @@ def scraper():
     game.insert_values_db(curs, conn)
     game.console_logs()
   conn.close()
-scraper()
