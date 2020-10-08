@@ -1,50 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="./css/style.css">
-        <title>Next Step</title>
-    </head>
-    <body>
-        <div >
-            <nav class="my_navbar">
-                <img src='' class="logo" alt="logo">
-                <div class="button">
-                    Accueil
-                </div>
-                <div class="button" href ="graph.html">
-                    Graphique
-                </div>
-                <div>
-                    <input type="search" class="light-table-filter" data-table="table-info" placeholder="Filter/Search">
-                </div>
-            </nav>
-        </div>
-        <div id='my_main_contain'>
-            <div class="title">
-                <h1>Prochaine sortie</h1>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/research.css">
+    <title>Next Step</title>
+</head>
+
+<body>
+    <div>
+        <nav class="my_navbar">
+            <img src='' class="logo" alt="logo">
+            <div class="button">
+                <a href='./index.html'>Accueil</a>
             </div>
-            <div class="corpse">
-                <div class="presentation">
-                    <h2>Présentation de notre projet</h2>
-                    <p>
-                        
-                    </p>
-                </div>
-                <div class="table">
-                    
-                    <table class = "table-info table">
-
-                    </table>
-                </div>
+            <div class="button">
+                <a href="./graph.html">Graphique</a>
             </div>
-        </div>  
-        <div class="foot">
-
+        </nav>
+    </div>
+    <div id='my_main_contain'>
+        <div class="title">
+            <h1>Prochaine sortie</h1>
         </div>
+        <div class="corpse">
+            <div class="table">
+                <iframe class="tbl-header" src ='./table.html' width="80%" height="500"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
 
-        <script  src="./js/java.js"></script>
-    </body>
+    </div>
+
+    <script src="./js/java.js"></script>
+</body>
 
 </html>
