@@ -30,4 +30,6 @@ def scraper():
     jeux_objet.scraping_data(link)
     jeux_objet.insert_values_db(curs, conn)
     jeux_objet.console_logs()
-  conn.close()
+
+
+
