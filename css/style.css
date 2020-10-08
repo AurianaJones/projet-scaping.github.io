@@ -4,20 +4,32 @@ a{
 }
 body {
   color: #fff;
-  background-color: #051116;
+  background-color: #000a17;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23010617' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23030317' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23080416' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%230c0616' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23100815' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
   text-align: center;
+  margin: 0;
+  padding: 0;
   }
 
+.logo{
+  height: 75px;
+}
 .my_navbar {
-    background-color: rgba(0, 0, 0, 0.712);
+    background-color: rgba(8, 2, 14, 0.712);
+    top:0;
     width: 100%;
-    left: 0%;
-    right: 0%;
-    top: 0%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 80px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom-color: rgba(255, 155, 118, 0.671);
     }
 
 .button {
@@ -45,4 +57,14 @@ body {
   }
   .corpse{
     color: rgb(255, 255, 255);
+}
+.footer {
+  background: #140c0c8e;
+  background-blend-mode: multiply;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0px 50px;
+  color: rgba(255, 255, 255, 0.575);
 }
