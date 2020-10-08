@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import urllib.request
 
-def parser_links(urlpage, links, nomdomaine):
+def scraping_append_links(urlpage, links, nomdomaine):
     #PARSER RECUPERATION LINKS
     page = urllib.request.urlopen(urlpage)
     soup = BeautifulSoup(page, 'html.parser')

@@ -3,7 +3,7 @@ from sqlite3 import connect
 import os
 from jeux import Jeux
 from create_tables import create_tables
-from bs4func import parser_links
+from bs4func import scraping_append_links
 
 def scraper():
   print('Lancement du scraper ...')
@@ -20,7 +20,7 @@ def scraper():
   #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   create_tables(curs,conn)
-  parser_links(urlpage, links, nomdomaine)
+  scraping_append_links(urlpage, links, nomdomaine)
 
   for link in links :
     game = Jeux(link, links)
@@ -28,3 +28,4 @@ def scraper():
     game.insert_values_db(curs, conn)
     game.console_logs()
   conn.close()
+scraper()
