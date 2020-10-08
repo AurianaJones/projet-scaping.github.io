@@ -2,12 +2,13 @@ import sqlite3
 from bs4 import BeautifulSoup
 import urllib.request
 
-
 class Jeux :
   game_id = 0
   titre_precedent = ""
+  inc = 0
 
-  def __init__(self, inc, link, links) :
+  def __init__(self, link, links) :
+    Jeux.inc += 1
     self.titre = "Null"
     self.genre = "Null"
     self.prix = "Null"
@@ -15,7 +16,7 @@ class Jeux :
     self.date_de_sortie = "Null"
     self.editeur = "Null"
     self.description = "Null"
-    print("---------------------------------------------------------------------------------------------\n>>>>>>> Link",inc,"/",len(links)," >",link,"\n")
+    print("---------------------------------------------------------------------------------------------\n>>>>>>> Link",Jeux.inc,"/",len(links)," >",link,"\n")
 
 
   def insert_values_db(self, curs, conn) :
@@ -27,16 +28,14 @@ class Jeux :
     conn.commit()
     Jeux.titre_precedent = self.titre
 
+
   def console_logs(self) :
     print("Game_ID >",Jeux.game_id,"\nTitre >",self.titre,"\nGenre >",self.genre,"\nPrix >",self.prix,"\nPlateforme >",self.plateforme,"\nDate de sortie >",self.date_de_sortie,"\nEditeur >",self.editeur,"\nDescription >",self.description)
-
-
 
 
   def scraping_data(self, link) :
     pagelink = urllib.request.urlopen(link)
     soup2 = BeautifulSoup(pagelink, 'html.parser')
-
 
     scrap_price = soup2.find('meta', attrs={'itemprop': 'price'})
     self.prix = scrap_price['content']

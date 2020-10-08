@@ -1,4 +1,3 @@
-
 import sqlite3
 
 def create_tables(curs,conn):
