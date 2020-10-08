@@ -1,0 +1,3 @@
+select * from games;
+select * from release_details;
+select * from games_details;
